@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Подписка</string>
-    <string name="success_subscription">Подписка на рассылку успешно оформлена для пользователя %s на элетронный адресс %s</string>
+    <string name="success_subscription">Подписка на рассылку успешно оформлена для пользователя %s на элетронный адрес %s</string>
     <string name="tv_2">Электронная почта</string>
     <string name="tv_1">Имя пользователя</string>
     <string name="TextView">TextView</string>
+    <string name="button_clean">Очистить</string>
 
 </resources>

@@ -12,15 +12,10 @@ import android.widget.TextView;
 import javax.xml.transform.Result;
 
 public class MainActivity<success_subscription> extends AppCompatActivity {
-    private Button button;
-    private TextView textView;
     private EditText editText;
     private EditText editText2;
     private TextView result;
 
-    private void setResult(String string) {
-
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,8 +23,7 @@ public class MainActivity<success_subscription> extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         editText = findViewById(R.id.editText);
         editText2 = findViewById(R.id.editText2);
-        result = findViewById(R.id.result);
-
+        result = findViewById(R.id.textView);
 
 
         init();
@@ -37,15 +31,22 @@ public class MainActivity<success_subscription> extends AppCompatActivity {
 
 
     private void init() {
-        button = findViewById(R.id.button_ok);
+        Button button = findViewById(R.id.button_ok);
         button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 result.setText(getString(R.string.success_subscription, editText2.getText(), editText.getText()));
             }
         });
-        textView = findViewById(R.id.textView);
-        textView.setText(R.string.success_subscription);
+        Button button1 = findViewById(R.id.button_clear);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText.getText().clear();
+                editText2.getText().clear();
+                result.setText("");
+            }
+        });
     }
 }
+
